@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saveur Restaurant Full Menu — Fast Food, BBQ, Pizza, Burgers, Drinks, Desserts." />
+  <title>Menu — Saveur Restaurant</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/menu.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" role="navigation" aria-label="Main Navigation">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Saveur Home">
+        <div class="logo-icon">S</div>
+        <span class="logo-text">Sa<span>veur</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="../index.html#reservation" class="btn btn-primary nav-cta">Reserve a Table</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="../index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="../index.html#reservation" class="btn btn-primary" style="margin-top:12px;">Reserve a Table</a>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero" aria-label="Menu Hero">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-content container">
+      <p class="eyebrow">Explore & Order</p>
+      <div class="gold-divider"></div>
+      <h1 class="section-title">Our Full Menu</h1>
+      <p>From sizzling BBQ to indulgent desserts — every craving, covered.</p>
+    </div>
+  </section>
+
+  <!-- ===== MENU TOOLBAR (Search + Filters) ===== -->
+  <div class="menu-toolbar" role="search" aria-label="Menu Search and Filter">
+    <div class="container toolbar-inner">
+
+      <!-- Search -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input
+          type="text"
+          id="menuSearch"
+          placeholder="Search dishes..."
+          aria-label="Search menu items"
+        />
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs" role="tablist" aria-label="Filter by category">
+        <button class="cat-tab active" data-category="all" role="tab" aria-selected="true">
+          🍽️ All <span class="tab-count">24</span>
+        </button>
+        <button class="cat-tab" data-category="fastfood" role="tab">
+          🍟 Fast Food <span class="tab-count">4</span>
+        </button>
+        <button class="cat-tab" data-category="bbq" role="tab">
+          🔥 BBQ <span class="tab-count">4</span>
+        </button>
+        <button class="cat-tab" data-category="pizza" role="tab">
+          🍕 Pizza <span class="tab-count">4</span>
+        </button>
+        <button class="cat-tab" data-category="burgers" role="tab">
+          🍔 Burgers <span class="tab-count">4</span>
+        </button>
+        <button class="cat-tab" data-category="drinks" role="tab">
+          🥤 Drinks <span class="tab-count">4</span>
+        </button>
+        <button class="cat-tab" data-category="desserts" role="tab">
+          🍰 Desserts <span class="tab-count">4</span>
+        </button>
+      </div>
+
+      <!-- Items Count -->
+      <p class="items-count" id="itemsCount" aria-live="polite">
+        <span>24</span> items found
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== MENU ITEMS ===== -->
+  <main class="menu-section" id="menu-items">
+    <div class="container">
+
+      <!-- NO RESULTS -->
+      <div class="no-results" id="noResults" aria-live="polite">
+        <div class="no-results-icon">🔍</div>
+        <h3>No dishes found</h3>
+        <p>Try a different search term or category.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('menuSearch').value=''; document.querySelector('.cat-tab[data-category=all]').click();">
+          Clear Filters
+        </button>
+      </div>
+
+      <!-- ==============================
+           CATEGORY: FAST FOOD
+      ============================== -->
+      <div class="category-group" data-category="fastfood">
+        <div class="category-label reveal">
+          <span class="label-icon">🍟</span>
+          <h2>Fast Food</h2>
+          <div class="label-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="Crispy Chicken Strips" data-category="fastfood" data-tags="chicken, crispy, fried">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=600&q=80" alt="Crispy Chicken Strips" loading="lazy" />
+              <span class="card-badge badge-bestseller">Best Seller</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Fast Food</p>
+              <h3 class="card-name">Crispy Chicken Strips</h3>
+              <p class="card-desc">Golden-fried chicken tenders marinated in our house spice blend, served with honey mustard and BBQ dipping sauce.</p>
+              <div class="card-tags">
+                <span class="card-tag">Crispy</span>
+                <span class="card-tag">Chicken</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$11</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Loaded Cheese Fries" data-category="fastfood" data-tags="fries, cheese, potato">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&q=80" alt="Loaded Cheese Fries" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Fast Food</p>
+              <h3 class="card-name">Loaded Cheese Fries</h3>
+              <p class="card-desc">Thick-cut fries piled with melted cheddar, jalapenos, sour cream, crispy bacon bits, and spring onion.</p>
+              <div class="card-tags">
+                <span class="card-tag">Cheesy</span>
+                <span class="card-tag">Spicy</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$9</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Spicy Chicken Wrap" data-category="fastfood" data-tags="wrap, chicken, spicy">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" alt="Spicy Chicken Wrap" loading="lazy" />
+              <span class="card-badge badge-spicy">🌶 Spicy</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Fast Food</p>
+              <h3 class="card-name">Spicy Chicken Wrap</h3>
+              <p class="card-desc">Grilled spicy chicken, shredded lettuce, tomatoes, red onion, and chipotle mayo wrapped in a warm tortilla.</p>
+              <div class="card-tags">
+                <span class="card-tag">Grilled</span>
+                <span class="card-tag">Spicy</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$13</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Veggie Spring Rolls" data-category="fastfood" data-tags="vegetarian, spring roll, veg">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1605479872346-ce7e8d3c0d70?w=600&q=80" alt="Veggie Spring Rolls" loading="lazy" />
+              <span class="card-badge badge-veg">🌱 Veg</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Fast Food</p>
+              <h3 class="card-name">Veggie Spring Rolls</h3>
+              <p class="card-desc">Crispy rolls filled with stir-fried cabbage, carrots, mushrooms, and glass noodles. Served with sweet chili sauce.</p>
+              <div class="card-tags">
+                <span class="card-tag">Vegan</span>
+                <span class="card-tag">Crispy</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$8</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ==============================
+           CATEGORY: BBQ
+      ============================== -->
+      <div class="category-group" data-category="bbq">
+        <div class="category-label reveal">
+          <span class="label-icon">🔥</span>
+          <h2>BBQ &amp; Grill</h2>
+          <div class="label-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="Grilled Ribeye Steak" data-category="bbq" data-tags="steak, beef, grill, ribeye">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" alt="Grilled Ribeye Steak" loading="lazy" />
+              <span class="card-badge badge-bestseller">Chef's Pick</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">BBQ & Grill</p>
+              <h3 class="card-name">Grilled Ribeye Steak</h3>
+              <p class="card-desc">28-day dry-aged prime ribeye, finished with truffle butter, roasted garlic mash, and seasonal greens.</p>
+              <div class="card-tags">
+                <span class="card-tag">Premium</span>
+                <span class="card-tag">Beef</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$42</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="BBQ Chicken Platter" data-category="bbq" data-tags="chicken, bbq, grilled">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1598514982901-9b4a8fd7e4b2?w=600&q=80" alt="BBQ Chicken Platter" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">BBQ & Grill</p>
+              <h3 class="card-name">BBQ Chicken Platter</h3>
+              <p class="card-desc">Half chicken marinated overnight in smoky BBQ sauce, slow-grilled to perfection. Served with coleslaw and corn.</p>
+              <div class="card-tags">
+                <span class="card-tag">Smoky</span>
+                <span class="card-tag">Grilled</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$26</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Lamb Seekh Kebab" data-category="bbq" data-tags="lamb, kebab, seekh, skewer">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80" alt="Lamb Seekh Kebab" loading="lazy" />
+              <span class="card-badge badge-new">New</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">BBQ & Grill</p>
+              <h3 class="card-name">Lamb Seekh Kebab</h3>
+              <p class="card-desc">Minced lamb with fresh herbs and warming spices, hand-formed on skewers and char-grilled over open flame.</p>
+              <div class="card-tags">
+                <span class="card-tag">Lamb</span>
+                <span class="card-tag">Skewer</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$22</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Grilled Salmon Fillet" data-category="bbq" data-tags="salmon, fish, seafood, grill">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80" alt="Grilled Salmon Fillet" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">BBQ & Grill</p>
+              <h3 class="card-name">Grilled Salmon Fillet</h3>
+              <p class="card-desc">Atlantic salmon fillet with lemon herb butter, grilled asparagus, and saffron rice. Light yet indulgent.</p>
+              <div class="card-tags">
+                <span class="card-tag">Seafood</span>
+                <span class="card-tag">Healthy</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$34</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ==============================
+           CATEGORY: PIZZA
+      ============================== -->
+      <div class="category-group" data-category="pizza">
+        <div class="category-label reveal">
+          <span class="label-icon">🍕</span>
+          <h2>Wood-Fired Pizza</h2>
+          <div class="label-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="Truffle Margherita" data-category="pizza" data-tags="pizza, margherita, truffle, veg">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" alt="Truffle Margherita Pizza" loading="lazy" />
+              <span class="card-badge badge-bestseller">Best Seller</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Pizza</p>
+              <h3 class="card-name">Truffle Margherita</h3>
+              <p class="card-desc">Neapolitan crust, San Marzano tomatoes, buffalo mozzarella, fresh basil, and black truffle shavings.</p>
+              <div class="card-tags">
+                <span class="card-tag">Vegetarian</span>
+                <span class="card-tag">Premium</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$24</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Pepperoni Supreme" data-category="pizza" data-tags="pizza, pepperoni, meat">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Pepperoni Supreme Pizza" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Pizza</p>
+              <h3 class="card-name">Pepperoni Supreme</h3>
+              <p class="card-desc">Double layer of premium beef pepperoni, three-cheese blend, red onions, and roasted red peppers on tomato base.</p>
+              <div class="card-tags">
+                <span class="card-tag">Meat</span>
+                <span class="card-tag">Cheesy</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$21</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="BBQ Chicken Pizza" data-category="pizza" data-tags="pizza, chicken, bbq">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" alt="BBQ Chicken Pizza" loading="lazy" />
+              <span class="card-badge badge-spicy">🌶 Hot</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Pizza</p>
+              <h3 class="card-name">BBQ Chicken Pizza</h3>
+              <p class="card-desc">Smoky BBQ sauce base, grilled chicken breast, caramelized onions, smoked gouda, and fresh cilantro.</p>
+              <div class="card-tags">
+                <span class="card-tag">BBQ</span>
+                <span class="card-tag">Chicken</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$22</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Four Cheese Pizza" data-category="pizza" data-tags="pizza, cheese, vegetarian">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=600&q=80" alt="Four Cheese Pizza" loading="lazy" />
+              <span class="card-badge badge-veg">🌱 Veg</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Pizza</p>
+              <h3 class="card-name">Four Cheese Pizza</h3>
+              <p class="card-desc">Mozzarella, gorgonzola, parmesan, and ricotta on a white garlic cream base with fresh thyme and honey drizzle.</p>
+              <div class="card-tags">
+                <span class="card-tag">Vegetarian</span>
+                <span class="card-tag">Rich</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$23</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ==============================
+           CATEGORY: BURGERS
+      ============================== -->
+      <div class="category-group" data-category="burgers">
+        <div class="category-label reveal">
+          <span class="label-icon">🍔</span>
+          <h2>Signature Burgers</h2>
+          <div class="label-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="Saveur Smash Burger" data-category="burgers" data-tags="burger, smash, beef">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Saveur Smash Burger" loading="lazy" />
+              <span class="card-badge badge-bestseller">Fan Fav</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Burgers</p>
+              <h3 class="card-name">Saveur Smash Burger</h3>
+              <p class="card-desc">Double smash patty, caramelized onions, aged cheddar, house pickles, and signature gold sauce on brioche bun.</p>
+              <div class="card-tags">
+                <span class="card-tag">Double Patty</span>
+                <span class="card-tag">Beef</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$18</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Mushroom Swiss Burger" data-category="burgers" data-tags="burger, mushroom, swiss, cheese">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=600&q=80" alt="Mushroom Swiss Burger" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Burgers</p>
+              <h3 class="card-name">Mushroom Swiss Burger</h3>
+              <p class="card-desc">Juicy beef patty, sautéed wild mushrooms, melted Swiss cheese, truffle aioli, and arugula on a toasted bun.</p>
+              <div class="card-tags">
+                <span class="card-tag">Truffle</span>
+                <span class="card-tag">Beef</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$19</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Crispy Chicken Burger" data-category="burgers" data-tags="burger, chicken, crispy, fried">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&q=80" alt="Crispy Chicken Burger" loading="lazy" />
+              <span class="card-badge badge-new">New</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Burgers</p>
+              <h3 class="card-name">Crispy Chicken Burger</h3>
+              <p class="card-desc">Buttermilk-fried chicken thigh, spicy mayo, pickled slaw, and dill pickles on a glazed potato bun.</p>
+              <div class="card-tags">
+                <span class="card-tag">Crispy</span>
+                <span class="card-tag">Chicken</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$16</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Veggie Black Bean Burger" data-category="burgers" data-tags="burger, vegan, vegetarian, black bean">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=600&q=80" alt="Veggie Black Bean Burger" loading="lazy" />
+              <span class="card-badge badge-veg">🌱 Vegan</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Burgers</p>
+              <h3 class="card-name">Veggie Black Bean Burger</h3>
+              <p class="card-desc">Smoky black bean patty, avocado, roasted corn salsa, chipotle sauce, and mixed greens on a whole wheat bun.</p>
+              <div class="card-tags">
+                <span class="card-tag">Vegan</span>
+                <span class="card-tag">Healthy</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$15</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ==============================
+           CATEGORY: DRINKS
+      ============================== -->
+      <div class="category-group" data-category="drinks">
+        <div class="category-label reveal">
+          <span class="label-icon">🥤</span>
+          <h2>Signature Drinks</h2>
+          <div class="label-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="Golden Sunset Mocktail" data-category="drinks" data-tags="mocktail, mango, passion fruit, drink">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" alt="Golden Sunset Mocktail" loading="lazy" />
+              <span class="card-badge badge-bestseller">Signature</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Drinks</p>
+              <h3 class="card-name">Golden Sunset Mocktail</h3>
+              <p class="card-desc">House-made mango & passion fruit blend, fresh mint, sparkling water, and edible gold flakes.</p>
+              <div class="card-tags">
+                <span class="card-tag">Mocktail</span>
+                <span class="card-tag">Tropical</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$9</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Iced Matcha Latte" data-category="drinks" data-tags="matcha, latte, iced, coffee, tea">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600&q=80" alt="Iced Matcha Latte" loading="lazy" />
+              <span class="card-badge badge-new">New</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Drinks</p>
+              <h3 class="card-name">Iced Matcha Latte</h3>
+              <p class="card-desc">Premium ceremonial-grade matcha whisked with oat milk, lightly sweetened with agave, served over ice.</p>
+              <div class="card-tags">
+                <span class="card-tag">Matcha</span>
+                <span class="card-tag">Vegan</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$7</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Classic Lemonade" data-category="drinks" data-tags="lemonade, fresh, cold, citrus">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&q=80" alt="Classic Lemonade" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Drinks</p>
+              <h3 class="card-name">Classic Fresh Lemonade</h3>
+              <p class="card-desc">Freshly squeezed lemon juice, cane sugar syrup, and cold sparkling water with a sprig of rosemary.</p>
+              <div class="card-tags">
+                <span class="card-tag">Fresh</span>
+                <span class="card-tag">Cold</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$6</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Berry Smoothie" data-category="drinks" data-tags="smoothie, berry, healthy, blueberry">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1553530666-c4b41e04d3e8?w=600&q=80" alt="Berry Smoothie" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Drinks</p>
+              <h3 class="card-name">Mixed Berry Smoothie</h3>
+              <p class="card-desc">Blended strawberries, blueberries, raspberries, banana, Greek yogurt, and a drizzle of honey. Thick and creamy.</p>
+              <div class="card-tags">
+                <span class="card-tag">Healthy</span>
+                <span class="card-tag">Smoothie</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$8</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ==============================
+           CATEGORY: DESSERTS
+      ============================== -->
+      <div class="category-group" data-category="desserts">
+        <div class="category-label reveal">
+          <span class="label-icon">🍰</span>
+          <h2>Desserts</h2>
+          <div class="label-line"></div>
+        </div>
+        <div class="menu-grid">
+
+          <article class="menu-card" data-name="Molten Lava Cake" data-category="desserts" data-tags="chocolate, cake, dessert, warm">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Molten Lava Cake" loading="lazy" />
+              <span class="card-badge badge-bestseller">Must Try</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Desserts</p>
+              <h3 class="card-name">Molten Lava Cake</h3>
+              <p class="card-desc">Warm dark chocolate fondant with a flowing molten center, paired with Madagascar vanilla ice cream and gold leaf.</p>
+              <div class="card-tags">
+                <span class="card-tag">Chocolate</span>
+                <span class="card-tag">Warm</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$14</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Crème Brûlée" data-category="desserts" data-tags="creme brulee, custard, french, dessert">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&q=80" alt="Crème Brûlée" loading="lazy" />
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Desserts</p>
+              <h3 class="card-name">Crème Brûlée</h3>
+              <p class="card-desc">Classic French vanilla custard with a perfectly torched caramel crust. Served with fresh raspberries and mint.</p>
+              <div class="card-tags">
+                <span class="card-tag">French</span>
+                <span class="card-tag">Classic</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$12</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Tiramisu" data-category="desserts" data-tags="tiramisu, italian, coffee, dessert">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=80" alt="Tiramisu" loading="lazy" />
+              <span class="card-badge badge-new">New</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Desserts</p>
+              <h3 class="card-name">Classic Tiramisu</h3>
+              <p class="card-desc">Ladyfinger biscuits soaked in espresso, layered with mascarpone cream, and dusted with premium cocoa powder.</p>
+              <div class="card-tags">
+                <span class="card-tag">Italian</span>
+                <span class="card-tag">Coffee</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$13</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-name="Mango Sorbet" data-category="desserts" data-tags="sorbet, mango, vegan, cold, ice cream">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?w=600&q=80" alt="Mango Sorbet" loading="lazy" />
+              <span class="card-badge badge-veg">🌱 Vegan</span>
+              <button class="card-fav" aria-label="Add to favourites"><i class="fa-regular fa-heart"></i></button>
+            </div>
+            <div class="card-body">
+              <p class="card-category">Desserts</p>
+              <h3 class="card-name">Mango Passion Sorbet</h3>
+              <p class="card-desc">Dairy-free sorbet made from Alphonso mangoes and passion fruit, served in a scooped mango shell. Light and refreshing.</p>
+              <div class="card-tags">
+                <span class="card-tag">Vegan</span>
+                <span class="card-tag">Tropical</span>
+              </div>
+              <div class="card-footer">
+                <span class="card-price">$10</span>
+                <button class="card-order-btn"><i class="fa-solid fa-plus"></i> Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Sa<span>veur</span></span>
+          </a>
+          <p>Fine dining crafted with passion, served with love. We bring the world's best flavors to your table.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#" onclick="document.querySelector('[data-category=fastfood]').click(); return false;">Fast Food</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=bbq]').click(); return false;">BBQ & Grill</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=pizza]').click(); return false;">Pizza</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=burgers]').click(); return false;">Burgers</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-category=desserts]').click(); return false;">Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span class="contact-info">12 Gulberg III, Main Boulevard<br />Lahore, Pakistan</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <span class="contact-info">+92 300 123 4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock contact-icon"></i>
+              <span class="contact-info">Mon – Sun: 12 PM – 11 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Saveur Restaurant. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Toast -->
+  <div class="cart-toast" id="cartToast" role="alert" aria-live="assertive">
+    <span class="toast-icon">✅</span>
+    <div class="toast-text">
+      <strong id="toastName">Item</strong>
+      <span>Added to your order!</span>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="../js/menu.js"></script>
+</body>
+</html>

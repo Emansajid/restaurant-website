@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saveur Restaurant — Fine Dining Experience. Authentic flavors crafted with passion." />
+  <title>Saveur — Fine Dining Restaurant</title>
+
+  <!-- Favicon (inline SVG via data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION
+  ========================================== -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Saveur Restaurant Home">
+        <div class="logo-icon">S</div>
+        <span class="logo-text">Sa<span>veur</span></span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#featured">Menu</a></li>
+        <li><a href="#why-us">About</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="#reservation" class="btn btn-primary nav-cta">Reserve a Table</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="#home">Home</a>
+    <a href="#featured">Menu</a>
+    <a href="#why-us">About</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="pages/contact.html">Contact</a>
+    <a href="#reservation" class="btn btn-primary" style="margin-top:12px;">Reserve a Table</a>
+  </nav>
+
+  <!-- ==========================================
+       HERO SECTION
+  ========================================== -->
+  <section class="hero" id="home" aria-label="Hero Section">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <p class="eyebrow hero-eyebrow">✦ Fine Dining Since 2008 ✦</p>
+
+        <h1 class="hero-title">
+          Where Every Meal<br />
+          Becomes a <em>Memory</em>
+        </h1>
+
+        <p class="hero-subtitle">
+          Handcrafted dishes inspired by global flavors — served with warmth, 
+          elegance, and an unforgettable ambiance right in the heart of the city.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#featured" class="btn btn-primary">
+            <i class="fa-solid fa-utensils"></i>
+            Explore Our Menu
+          </a>
+          <a href="#reservation" class="btn btn-outline">
+            <i class="fa-regular fa-calendar"></i>
+            Book a Table
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hero Stats -->
+      <div class="hero-badge">
+        <div class="hero-stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Menu Items</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Happy Guests</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FEATURED DISHES
+  ========================================== -->
+  <section class="featured-dishes section-padding" id="featured" aria-label="Featured Dishes">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="eyebrow">Our Specialties</p>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Chef's Featured <br />Signature Dishes</h2>
+        <p style="margin-top:16px; max-width:520px; margin-left:auto; margin-right:auto; font-size:0.95rem;">
+          Every plate tells a story — crafted from the finest seasonal ingredients 
+          and inspired by culinary traditions from around the world.
+        </p>
+      </div>
+
+      <div class="dishes-grid">
+
+        <!-- Dish 1 -->
+        <article class="dish-card">
+          <div class="dish-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" 
+              alt="Grilled Ribeye Steak"
+              loading="lazy"
+            />
+            <span class="dish-badge">Chef's Pick</span>
+          </div>
+          <div class="dish-body">
+            <p class="dish-category">BBQ & Grill</p>
+            <h3 class="dish-name">Grilled Ribeye Steak</h3>
+            <p class="dish-desc">28-day dry-aged prime ribeye, finished with truffle butter, roasted garlic mash, and seasonal greens.</p>
+            <div class="dish-footer">
+              <span class="dish-price">$42</span>
+              <button class="dish-btn">Order Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 2 -->
+        <article class="dish-card">
+          <div class="dish-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" 
+              alt="Wood-Fired Margherita Pizza"
+              loading="lazy"
+            />
+            <span class="dish-badge">Best Seller</span>
+          </div>
+          <div class="dish-body">
+            <p class="dish-category">Wood-Fired Pizza</p>
+            <h3 class="dish-name">Truffle Margherita</h3>
+            <p class="dish-desc">Neapolitan-style crust with San Marzano tomatoes, fresh buffalo mozzarella, basil oil, and black truffle shavings.</p>
+            <div class="dish-footer">
+              <span class="dish-price">$24</span>
+              <button class="dish-btn">Order Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 3 -->
+        <article class="dish-card">
+          <div class="dish-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" 
+              alt="Gourmet Smash Burger"
+              loading="lazy"
+            />
+          </div>
+          <div class="dish-body">
+            <p class="dish-category">Signature Burgers</p>
+            <h3 class="dish-name">Saveur Smash Burger</h3>
+            <p class="dish-desc">Double smash patty, caramelized onions, aged cheddar, house pickles, and our signature gold sauce on a brioche bun.</p>
+            <div class="dish-footer">
+              <span class="dish-price">$18</span>
+              <button class="dish-btn">Order Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 4 -->
+        <article class="dish-card">
+          <div class="dish-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" 
+              alt="Chocolate Lava Cake"
+              loading="lazy"
+            />
+            <span class="dish-badge">New</span>
+          </div>
+          <div class="dish-body">
+            <p class="dish-category">Desserts</p>
+            <h3 class="dish-name">Molten Lava Cake</h3>
+            <p class="dish-desc">Warm dark chocolate fondant with a molten center, paired with Madagascar vanilla bean ice cream and gold leaf.</p>
+            <div class="dish-footer">
+              <span class="dish-price">$14</span>
+              <button class="dish-btn">Order Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 5 -->
+        <article class="dish-card">
+          <div class="dish-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&q=80" 
+              alt="Prawn Pasta"
+              loading="lazy"
+            />
+          </div>
+          <div class="dish-body">
+            <p class="dish-category">Pasta & Risotto</p>
+            <h3 class="dish-name">King Prawn Linguine</h3>
+            <p class="dish-desc">Hand-rolled linguine tossed with tiger prawns, cherry tomatoes, garlic, chilli, and a white wine cream reduction.</p>
+            <div class="dish-footer">
+              <span class="dish-price">$28</span>
+              <button class="dish-btn">Order Now</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 6 -->
+        <article class="dish-card">
+          <div class="dish-image-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80" 
+              alt="Signature Mocktail"
+              loading="lazy"
+            />
+          </div>
+          <div class="dish-body">
+            <p class="dish-category">Signature Drinks</p>
+            <h3 class="dish-name">Golden Sunset Mocktail</h3>
+            <p class="dish-desc">House-made mango & passion fruit blend, fresh mint, sparkling water, and edible gold flakes. A visual masterpiece.</p>
+            <div class="dish-footer">
+              <span class="dish-price">$9</span>
+              <button class="dish-btn">Order Now</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="dishes-cta reveal">
+        <a href="pages/menu.html" class="btn btn-outline">
+          View Full Menu &nbsp; <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHY CHOOSE US
+  ========================================== -->
+  <section class="why-choose section-padding" id="why-us" aria-label="Why Choose Us">
+    <div class="container">
+      <div class="why-grid">
+
+        <!-- Left: Images -->
+        <div class="why-image-wrap reveal">
+          <div class="why-image-main">
+            <img 
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" 
+              alt="Fine dining restaurant interior"
+              loading="lazy"
+            />
+          </div>
+          <div class="why-image-accent">
+            <img 
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" 
+              alt="Chef plating a dish"
+              loading="lazy"
+            />
+          </div>
+          <div class="why-award">
+            <span class="why-award-number">⭐ 4.9</span>
+            <span class="why-award-text">Rating</span>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="why-content reveal">
+          <p class="eyebrow">Why Saveur</p>
+          <div class="gold-divider left"></div>
+          <h2 class="section-title">More Than a Meal —<br />An Experience</h2>
+          <p style="margin-top:16px; font-size:0.95rem; line-height:1.8;">
+            At Saveur, we believe dining is an art form. From the moment you walk through our doors, 
+            every detail — the lighting, the music, the service, the food — is orchestrated to create 
+            something truly unforgettable.
+          </p>
+
+          <div class="why-features">
+
+            <div class="why-feature">
+              <div class="feature-icon">👨‍🍳</div>
+              <div>
+                <h3 class="feature-title">World-Class Chefs</h3>
+                <p class="feature-desc">Our kitchen is led by award-winning chefs trained in Paris, Tokyo, and New York — bringing global mastery to every plate.</p>
+              </div>
+            </div>
+
+            <div class="why-feature">
+              <div class="feature-icon">🌿</div>
+              <div>
+                <h3 class="feature-title">Farm-to-Table Fresh</h3>
+                <p class="feature-desc">We source ingredients daily from local farms and trusted suppliers, ensuring every bite is at peak freshness and flavor.</p>
+              </div>
+            </div>
+
+            <div class="why-feature">
+              <div class="feature-icon">🕯️</div>
+              <div>
+                <h3 class="feature-title">Intimate Ambiance</h3>
+                <p class="feature-desc">Whether it's a date night or a family celebration, our warm, candlelit setting creates the perfect atmosphere for any occasion.</p>
+              </div>
+            </div>
+
+            <div class="why-feature">
+              <div class="feature-icon">🚀</div>
+              <div>
+                <h3 class="feature-title">Swift & Attentive Service</h3>
+                <p class="feature-desc">Our dedicated team is trained to anticipate your needs — delivering excellence without ever making you feel rushed.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TESTIMONIALS
+  ========================================== -->
+  <section class="testimonials section-padding" id="testimonials" aria-label="Customer Testimonials">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="eyebrow">Guest Voices</p>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">What Our Guests Are Saying</h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">
+            "Saveur isn't just a restaurant — it's a destination. The ribeye was perfectly 
+            cooked and the atmosphere made our anniversary truly magical. We'll be back every year."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <p class="author-name">Ahmed Raza</p>
+              <p class="author-role">Food Blogger · Lahore</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">
+            "The truffle margherita pizza is something out of this world. I've visited over 
+            50 restaurants and Saveur stands in a league of its own. Absolutely five stars."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div>
+              <p class="author-name">Sara Khan</p>
+              <p class="author-role">Travel Writer · Karachi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <p class="testimonial-text">
+            "From the moment we sat down to the last bite of that lava cake, everything 
+            was perfect. The staff remembered my wife's dietary restrictions without being reminded — impressive!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">U</div>
+            <div>
+              <p class="author-name">Usman Tariq</p>
+              <p class="author-role">Business Executive · Islamabad</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RESERVATION BANNER
+  ========================================== -->
+  <section id="reservation" style="
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border-top: 1px solid rgba(212,168,67,0.2);
+    border-bottom: 1px solid rgba(212,168,67,0.2);
+    padding: 80px 0;
+    text-align: center;
+  ">
+    <div class="container reveal">
+      <p class="eyebrow">Limited Seats Available</p>
+      <div class="gold-divider"></div>
+      <h2 class="section-title" style="margin-bottom:16px;">Reserve Your Table Tonight</h2>
+      <p style="margin-bottom:36px; font-size:0.95rem; max-width:480px; margin-left:auto; margin-right:auto;">
+        Secure your spot for an unforgettable evening. Walk-ins welcome but reservations recommended.
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="pages/contact.html" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          Book Online
+        </a>
+        <a href="tel:+92301234567" class="btn btn-outline">
+          <i class="fa-solid fa-phone"></i>
+          Call Us: +92 300 123 4567
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+  ========================================== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Sa<span>veur</span></span>
+          </a>
+          <p>
+            Fine dining crafted with passion, served with love. 
+            We bring the world's best flavors to your table, every single day.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/menu.html">Menu</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="#reservation">Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Menu Categories -->
+        <div>
+          <h4 class="footer-heading">Our Menu</h4>
+          <ul class="footer-links">
+            <li><a href="pages/menu.html">Fast Food</a></li>
+            <li><a href="pages/menu.html">BBQ & Grill</a></li>
+            <li><a href="pages/menu.html">Pizza</a></li>
+            <li><a href="pages/menu.html">Burgers</a></li>
+            <li><a href="pages/menu.html">Desserts</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span class="contact-info">12 Gulberg III, Main Boulevard<br />Lahore, Pakistan</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <span class="contact-info">+92 300 123 4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope contact-icon"></i>
+              <span class="contact-info">hello@saveurrestaurant.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock contact-icon"></i>
+              <span class="contact-info">Mon – Sun: 12 PM – 11 PM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Saveur Restaurant. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
