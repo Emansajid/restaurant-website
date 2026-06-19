@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Saveur Restaurant — Book a table, send a message, or find us in Lahore." />
+  <title>Contact — Saveur Restaurant</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar scrolled" role="navigation" aria-label="Main Navigation">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <div class="logo-icon">S</div>
+        <span class="logo-text">Sa<span>veur</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="#contact-form" class="btn btn-primary nav-cta">Send Message</a>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="../index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#contact-form" class="btn btn-primary" style="margin-top:12px;">Send Message</a>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero" aria-label="Contact Hero">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-content container">
+      <p class="eyebrow">We'd Love to Hear From You</p>
+      <div class="gold-divider"></div>
+      <h1 class="section-title">Get In Touch</h1>
+      <p>Reserve a table, share feedback, or just say hello — we're always here.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT INFO CARDS ===== -->
+  <section class="contact-cards-section" aria-label="Contact Information">
+    <div class="container">
+      <div class="contact-cards-grid">
+
+        <div class="contact-info-card reveal">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="info-card-title">Our Location</h3>
+          <p class="info-card-detail">
+            12 Gulberg III, Main Boulevard<br />
+            Lahore, Punjab, Pakistan
+          </p>
+        </div>
+
+        <div class="contact-info-card reveal">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h3 class="info-card-title">Phone Number</h3>
+          <p class="info-card-detail">
+            <a href="tel:+923001234567">+92 300 123 4567</a><br />
+            <a href="tel:+924235678901">+92 42 3567 8901</a>
+          </p>
+        </div>
+
+        <div class="contact-info-card reveal">
+          <div class="card-icon-wrap">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3 class="info-card-title">Email Address</h3>
+          <p class="info-card-detail">
+            <a href="mailto:hello@saveurrestaurant.com">hello@saveurrestaurant.com</a><br />
+            <a href="mailto:reservations@saveurrestaurant.com">reservations@saveur.com</a>
+          </p>
+        </div>
+
+        <div class="contact-info-card reveal">
+          <div class="card-icon-wrap">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h3 class="info-card-title">Opening Hours</h3>
+          <p class="info-card-detail">
+            Mon – Thu: 12 PM – 10 PM<br />
+            Fri – Sun: 12 PM – 11 PM
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN: FORM + MAP ===== -->
+  <section class="contact-main" id="contact-form" aria-label="Contact Form and Map">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ===== CONTACT FORM ===== -->
+        <div class="form-wrapper reveal">
+          <div class="form-header">
+            <p class="eyebrow">Send a Message</p>
+            <div class="gold-divider left"></div>
+            <h2 class="section-title">We'll Get Back<br />Within 24 Hours</h2>
+          </div>
+
+          <!-- SUCCESS STATE -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. Our team will respond within 24 hours.</p>
+            <button class="btn btn-primary" id="resetBtn">Send Another Message</button>
+          </div>
+
+          <!-- FORM -->
+          <form id="contactForm" novalidate aria-label="Contact form">
+
+            <!-- Name Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fname">First Name <span>*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="fname" name="fname" class="form-control"
+                    placeholder="e.g. Eman" maxlength="50" autocomplete="given-name" />
+                  <span class="input-icon" aria-hidden="true"></span>
+                </div>
+                <p class="field-msg error-msg" id="fnameError" role="alert"></p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="lname">Last Name <span>*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="lname" name="lname" class="form-control"
+                    placeholder="e.g. Sajid" maxlength="50" autocomplete="family-name" />
+                  <span class="input-icon" aria-hidden="true"></span>
+                </div>
+                <p class="field-msg error-msg" id="lnameError" role="alert"></p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address <span>*</span></label>
+              <div class="input-wrap">
+                <input type="email" id="email" name="email" class="form-control"
+                  placeholder="you@example.com" autocomplete="email" />
+                <span class="input-icon" aria-hidden="true"></span>
+              </div>
+              <p class="field-msg error-msg" id="emailError" role="alert"></p>
+              <p class="field-msg success-msg" id="emailOk">
+                <i class="fa-solid fa-circle-check"></i> Valid email address
+              </p>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number <span style="color:var(--color-text); font-weight:400;">(Optional)</span></label>
+              <div class="input-wrap">
+                <input type="tel" id="phone" name="phone" class="form-control"
+                  placeholder="+92 300 000 0000" autocomplete="tel" />
+                <span class="input-icon" aria-hidden="true"></span>
+              </div>
+              <p class="field-msg error-msg" id="phoneError" role="alert"></p>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject <span>*</span></label>
+              <div class="input-wrap">
+                <select id="subject" name="subject" class="form-control">
+                  <option value="">— Select a subject —</option>
+                  <option value="reservation">Table Reservation</option>
+                  <option value="feedback">Feedback & Reviews</option>
+                  <option value="events">Private Events & Catering</option>
+                  <option value="complaint">Complaint</option>
+                  <option value="partnership">Business Partnership</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <p class="field-msg error-msg" id="subjectError" role="alert"></p>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label class="form-label" for="message">Message <span>*</span></label>
+              <textarea id="message" name="message" class="form-control"
+                placeholder="Write your message here... (minimum 20 characters)"
+                maxlength="500" rows="5" aria-describedby="charCounter"></textarea>
+              <p class="char-counter" id="charCounter">0 / 500</p>
+              <p class="field-msg error-msg" id="messageError" role="alert"></p>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+              <span id="btnText"><i class="fa-solid fa-paper-plane"></i> &nbsp;Send Message</span>
+              <span class="btn-loader" id="btnLoader"></span>
+            </button>
+
+          </form>
+        </div>
+
+        <!-- ===== MAP + HOURS COLUMN ===== -->
+        <div class="map-info-column reveal">
+
+          <!-- Google Map Embed -->
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.5!2d74.3436!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzEzLjQiTiA3NMKwMjAnMzYuOSJF!5e0!3m2!1sen!2spk!4v1620000000000!5m2!1sen!2spk"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Saveur Restaurant Location — Gulberg III, Lahore"
+              aria-label="Google Map showing Saveur Restaurant location">
+            </iframe>
+          </div>
+
+          <!-- Opening Hours -->
+          <div class="hours-card">
+            <h3 class="hours-title">
+              <i class="fa-regular fa-clock" style="color:var(--color-gold);"></i>
+              Opening Hours
+            </h3>
+            <div class="hours-list">
+              <div class="hours-row">
+                <span class="hours-day">Monday – Thursday</span>
+                <span class="hours-time open">12:00 PM – 10:00 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Friday</span>
+                <span class="hours-time open">12:00 PM – 11:30 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Saturday – Sunday</span>
+                <span class="hours-time open">11:00 AM – 11:30 PM</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day">Public Holidays</span>
+                <span class="hours-time open">12:00 PM – 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL LINKS ===== -->
+  <section class="contact-social-section" aria-label="Social Media Links">
+    <div class="container reveal">
+      <p class="eyebrow">Stay Connected</p>
+      <div class="gold-divider"></div>
+      <h2 class="section-title" style="font-size:1.8rem;">Follow Us on Social Media</h2>
+      <p style="margin-top:12px; font-size:0.92rem;">Stay updated with our latest dishes, events, and offers.</p>
+
+      <div class="contact-social-links">
+        <a href="#" class="social-pill" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" class="social-pill" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+        <a href="#" class="social-pill" aria-label="Twitter/X">
+          <i class="fa-brands fa-x-twitter"></i> Twitter / X
+        </a>
+        <a href="#" class="social-pill" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+        <a href="#" class="social-pill" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">
+            <div class="logo-icon">S</div>
+            <span class="logo-text">Sa<span>veur</span></span>
+          </a>
+          <p>Fine dining crafted with passion, served with love. We bring the world's best flavors to your table.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="#contact-form">Send Message</a></li>
+            <li><a href="tel:+923001234567">Call Us</a></li>
+            <li><a href="mailto:hello@saveurrestaurant.com">Email Us</a></li>
+            <li><a href="#" >Find Us on Map</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot contact-icon"></i>
+              <span class="contact-info">12 Gulberg III, Main Boulevard<br />Lahore, Pakistan</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone contact-icon"></i>
+              <span class="contact-info">+92 300 123 4567</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-regular fa-clock contact-icon"></i>
+              <span class="contact-info">Mon – Sun: 12 PM – 11 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Saveur Restaurant. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+  <script src="../js/contact.js"></script>
+</body>
+</html>
